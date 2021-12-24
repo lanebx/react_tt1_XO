@@ -1,2 +1,21 @@
 @import '../../variable';
 
+.Field {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+  &-container {
+    display: grid;
+    grid: 100px 100px 100px / 100px 100px 100px;
+    gap: 5px;
+    background-color: $win-line-color;
+  
+    .Field__block {
+      background-color: $field-color;
+    
+    }
+  }
+}
+
