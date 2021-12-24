@@ -1,13 +1,13 @@
 /* eslint-disable react/no-unused-state */
 import React from 'react';
-import './App.scss';
+import './Result.scss';
 
 interface State {
   firstPlayerName: string;
   secondPlayerName: string;
 }
 
-export class App extends React.Component {
+export class Result extends React.Component {
   state: State = {
     firstPlayerName: '',
     secondPlayerName: '',
