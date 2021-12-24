@@ -1,3 +1,7 @@
+# Demo 
+
+https://lanebx.github.io/react_tt1_XO/
+
 # Task
 
 Тестовое задание Front-end, React
@@ -20,3 +24,5 @@ React
 Просьба присылать ответ ссылкой на гитхаб.
 Ответ присылайте сюда.
 Если есть вопросы, пишите.
+
+<img width="604" alt="Снимок экрана 2021-12-24 в 17 27 43" src="https://user-images.githubusercontent.com/32616842/147362107-ae532a3e-4d1b-41b3-87dc-1b7f104adf7d.png">
