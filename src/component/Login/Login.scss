@@ -1,0 +1,69 @@
+@import '../../variable';
+
+.Login {
+	font-family: "Roboto Mono", monospace;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+
+	&__form {
+		border: 1px solid $black-color;
+		padding: 30px;
+
+		box-shadow: inset 2px 2px 5px #4c5a8383, 1px 1px 5px #799dff83;
+	}
+
+	&__input-container {
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0;
+	}
+
+	&__button {
+		display: block;
+		margin: 30px auto;
+		font-size: 20px;
+		font-weight: 200;
+		letter-spacing: 1px;
+		padding: 13px 50px;
+		outline: 0;
+		z-index: 1;
+		border: 1px solid $black-color;
+		cursor: pointer;
+		position: relative;
+		background-color: transparent;
+		font-family: inherit;
+	}
+
+	&__button::after {
+		content: "";
+		background-color: #799dff83;
+		width: 100%;
+		z-index: -1;
+		position: absolute;
+		height: 100%;
+		top: 7px;
+		left: 7px;
+		transition: 0.2s;
+	}
+
+	&__button:hover::after {
+		top: 0px;
+		left: 0px;
+	}
+
+	&__input {
+		font-size: 20px;
+		font-weight: 200;
+		letter-spacing: 1px;
+		padding: 13px 10px 13px;
+		outline: 0;
+		border: 1px solid $black-color;
+		cursor: pointer;
+		position: relative;
+		background-color: #fff;
+		font-family: inherit;
+	}
+}

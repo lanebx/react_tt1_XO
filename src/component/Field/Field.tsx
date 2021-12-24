@@ -7,7 +7,12 @@ interface State {
   secondPlayerName: string;
 }
 
-export class Field extends React.Component {
+interface Props {
+  firstPlayerName: string;
+  secondPlayerName: string;
+}
+
+export class Field extends React.Component<Props, {}> {
   state: State = {
     firstPlayerName: '',
     secondPlayerName: '',
@@ -15,7 +20,7 @@ export class Field extends React.Component {
 
   render() {
     return (
-      <div className="Aplication">
+      <div className="Field">
 
       </div>
     );

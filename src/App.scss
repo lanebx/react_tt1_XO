@@ -1,3 +1,10 @@
+@import './variable';
+
 .starter {
   font-size: 18px;
+}
+
+.Aplication {
+  height: 100vh;
+  background-color: $bacground-color;
 }
