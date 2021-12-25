@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -156,12 +155,9 @@ export class Field extends React.Component<Props, {}> {
       fieldArray,
       firstPlayerScore,
       secondPlayerScore,
-      winnerLine,
     } = this.state;
 
     const { firstPlayerName, secondPlayerName } = this.props;
-
-    console.log(firstPlayerScore, secondPlayerScore, winnerLine);
 
     return (
       <div className="Field">

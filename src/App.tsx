@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /* eslint-disable react/no-unused-state */
 import React from 'react';
 import './App.scss';
@@ -15,7 +14,7 @@ export class App extends React.Component {
   state: State = {
     firstPlayerName: '',
     secondPlayerName: '',
-    loggedIn: false, // если логин совершен то показать поле, скрыть логин панель
+    loggedIn: false,
   };
 
   login = (user1Name: string, user2Name: string) => {
@@ -36,8 +35,6 @@ export class App extends React.Component {
 
   render(): React.ReactNode {
     const { loggedIn, firstPlayerName, secondPlayerName } = this.state;
-
-    // console.log(loggedIn, firstPlayerName, secondPlayerName);
 
     return (
       <div className="Aplication">

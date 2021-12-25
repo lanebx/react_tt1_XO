@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unused-state */
-/* eslint-disable no-console */
 import React from 'react';
 import './Login.scss';
 
