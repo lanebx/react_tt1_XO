@@ -21,22 +21,6 @@
 		margin: 20px 0;
 	}
 
-	&__button {
-		display: block;
-		margin: 30px auto;
-		font-size: 20px;
-		font-weight: 200;
-		letter-spacing: 1px;
-		padding: 13px 50px;
-		outline: 0;
-		z-index: 1;
-		border: 1px solid $black-color;
-		cursor: pointer;
-		position: relative;
-		background-color: transparent;
-		font-family: inherit;
-	}
-
 	&__button::after {
 		content: "";
 		background-color: #799dff83;
@@ -66,4 +50,20 @@
 		background-color: transparent;
 		font-family: inherit;
 	}
+}
+
+.button {
+	display: block;
+	margin: 30px auto;
+	font-size: 20px;
+	font-weight: 200;
+	letter-spacing: 1px;
+	padding: 13px 50px;
+	outline: 0;
+	z-index: 1;
+	border: 1px solid $black-color;
+	cursor: pointer;
+	position: relative;
+	background-color: transparent;
+	font-family: inherit;
 }

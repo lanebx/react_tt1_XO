@@ -4,6 +4,8 @@
   display: flex;
 	justify-content: center;
 	align-items:flex-start;
+  flex-direction: row;
+
 	height: 100%;
   gap: 30px;
   padding-top: 200px;
@@ -15,13 +17,19 @@
     grid: 100px 100px 100px / 100px 100px 100px;
     gap: 5px;
     background-color: $frame-color;
-  
-    .Field__block {
-      background-color: $field-color;
-    }
+
+  }
+
+  &__block {
+    background-color: $field-color;
+  }
+
+  .button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
-
 
 svg {
   display: block;

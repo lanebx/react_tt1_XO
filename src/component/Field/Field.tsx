@@ -61,7 +61,7 @@ export class Field extends React.Component<Props, {}> {
         const newWinnerLine = this.calculateWinner(state.fieldArray);
 
         return {
-          firstPlayerScore: state.firstPlayerScore + 1,
+          secondPlayerScore: state.firstPlayerScore + 1,
           winnerLine: newWinnerLine?.pop(),
           disabled: true,
         };
@@ -94,6 +94,12 @@ export class Field extends React.Component<Props, {}> {
           };
         });
       }
+    }
+
+    if (this.state.fieldArray.every((item) => item !== 0)) {
+      this.setState({
+        disabled: true,
+      });
     }
   };
 
@@ -177,26 +183,28 @@ export class Field extends React.Component<Props, {}> {
               </div>
             );
           })}
+        </div>
+
+        <div className="nav-info-container">
+          <Result
+            firstPlayerScore={firstPlayerScore}
+            secondPlayerScore={secondPlayerScore}
+            firstPlayerName={firstPlayerName}
+            secondPlayerName={secondPlayerName}
+          />
 
           {this.state.disabled && (
-            <>
-              <button type="button" onClick={() => this.newGame()}>
+            <div className="button-container">
+              <button type="button" onClick={() => this.newGame()} className="button-nav button">
                 New game
               </button>
 
-              <button type="button" onClick={() => this.clearField()}>
+              <button type="button" onClick={() => this.clearField()} className="button-nav button">
                 New round
               </button>
-            </>
+            </div>
           )}
         </div>
-
-        <Result
-          firstPlayerScore={firstPlayerScore}
-          secondPlayerScore={secondPlayerScore}
-          firstPlayerName={firstPlayerName}
-          secondPlayerName={secondPlayerName}
-        />
       </div>
     );
   }
