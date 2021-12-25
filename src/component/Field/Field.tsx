@@ -67,7 +67,7 @@ export class Field extends React.Component<Props, {}> {
         const newWinnerLine = this.calculateWinner(state.fieldArray);
 
         return {
-          secondPlayerScore: state.firstPlayerScore + 1,
+          secondPlayerScore: state.secondPlayerScore + 1,
           winnerLine: newWinnerLine?.pop(),
           disabled: true,
         };
