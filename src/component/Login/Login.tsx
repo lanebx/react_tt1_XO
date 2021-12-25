@@ -17,12 +17,36 @@ export class Login extends React.Component<Props, State> {
   state: State = {
     userFName: '',
     userSName: '',
-    isFNameValid: false,
-    isSNameValid: false,
+    isFNameValid: true,
+    isSNameValid: true,
   };
 
   inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
+
+    if (name === 'userFName') {
+      if (value.trim().length === value.length) {
+        this.setState({
+          isFNameValid: true,
+        });
+      } else {
+        this.setState({
+          isFNameValid: false,
+        });
+      }
+    }
+
+    if (name === 'userSName') {
+      if (value.trim().length === value.length) {
+        this.setState({
+          isSNameValid: true,
+        });
+      } else {
+        this.setState({
+          isSNameValid: false,
+        });
+      }
+    }
 
     this.setState({
       [name]: value,
@@ -57,7 +81,7 @@ export class Login extends React.Component<Props, State> {
             <input
               type="text"
               name="userFName"
-              className="Login__input"
+              className={this.state.isFNameValid ? 'Login__input' : 'Login__input noValid'}
               value={userFName}
               onChange={this.inputHandler}
               autoComplete="off"
@@ -73,7 +97,7 @@ export class Login extends React.Component<Props, State> {
             <input
               type="text"
               name="userSName"
-              className="Login__input"
+              className={this.state.isSNameValid ? 'Login__input' : 'Login__input noValid'}
               value={userSName}
               onChange={this.inputHandler}
               autoComplete="off"
