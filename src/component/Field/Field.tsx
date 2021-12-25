@@ -1,3 +1,4 @@
+/* eslint-disable react/no-did-update-set-state */
 /* eslint-disable @typescript-eslint/no-unused-expressions */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
@@ -40,6 +41,12 @@ export class Field extends React.Component<Props, {}> {
         (this.state.atributeChecker - 1) % 2 === 0
           ? this.scoreChecer('x')
           : this.scoreChecer('o');
+      }
+
+      if (this.state.fieldArray.every((item) => item !== 0)) {
+        this.setState({
+          disabled: true,
+        });
       }
     }
   }
@@ -93,12 +100,6 @@ export class Field extends React.Component<Props, {}> {
           };
         });
       }
-    }
-
-    if (this.state.fieldArray.every((item) => item !== 0)) {
-      this.setState({
-        disabled: true,
-      });
     }
   };
 
