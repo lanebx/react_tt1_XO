@@ -72,7 +72,6 @@
 
 .winner7::after {
   content: '';
-  width: 200px;
   position: relative;
   display: block;
   left: 150px;
@@ -82,4 +81,17 @@
   width: 6px;
   border-radius: 10px;
   transform: rotate(-45deg);
+}
+
+.winner8::after {
+  content: '';
+  position: relative;
+  display: block;
+  left: 150px;
+  bottom: 300px;
+  background-color: #a2423a;
+  height: 285px;
+  width: 6px;
+  border-radius: 10px;
+  transform: rotate(45deg);
 }
