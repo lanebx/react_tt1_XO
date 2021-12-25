@@ -3,19 +3,33 @@
 .Field {
   display: flex;
 	justify-content: center;
-	align-items: center;
+	align-items:flex-start;
 	height: 100%;
+  gap: 30px;
+  padding-top: 200px;
+
 
   &-container {
     display: grid;
+    height: 310px;
     grid: 100px 100px 100px / 100px 100px 100px;
     gap: 5px;
-    background-color: $win-line-color;
+    background-color: $frame-color;
   
     .Field__block {
       background-color: $field-color;
-    
     }
   }
 }
 
+
+svg {
+  display: block;
+}
+
+.close-x {
+  stroke: #c4c5c5;
+  fill: transparent;
+  stroke-linecap: butt;
+  stroke-width: 3;
+}

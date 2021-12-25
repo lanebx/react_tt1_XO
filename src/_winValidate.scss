@@ -1,0 +1,85 @@
+.winner1::after {
+  content: '';
+  position: relative;
+  display: block;
+  right: -10px;
+  bottom: 265px;
+  background-color: #a2423a;
+  height: 4px;
+  width: 285px;
+  border-radius: 10px;
+}
+
+.winner2::after {
+  content: '';
+  position: relative;
+  display: block;
+  right: -10px;
+  bottom: 163px;
+  background-color: #a2423a;
+  height: 5px;
+  width: 285px;
+  border-radius: 10px;
+}
+
+.winner3::after {
+  content: '';
+  position: relative;
+  display: block;
+  right: -10px;
+  bottom: 59px;
+  background-color: #a2423a;
+  height: 5px;
+  width: 285px;
+  border-radius: 10px;
+}
+
+.winner4::after {
+  content: '';
+  position: relative;
+  display: block;
+  right: -47px;
+  bottom: 302px;
+  background-color: #a2423a;
+  height: 285px;
+  width: 5px;
+  border-radius: 10px;
+}
+
+.winner5::after {
+  content: '';
+  position: relative;
+  display: block;
+  right: -153px;
+  bottom: 302px;
+  background-color: #a2423a;
+  height: 285px;
+  width: 5px;
+  border-radius: 10px;
+}
+
+.winner6::after {
+  content: '';
+  position: relative;
+  display: block;
+  left: 257px;
+  bottom: 302px;
+  background-color: #a2423a;
+  height: 285px;
+  width: 6px;
+  border-radius: 10px;
+}
+
+.winner7::after {
+  content: '';
+  width: 200px;
+  position: relative;
+  display: block;
+  left: 150px;
+  bottom: 304px;
+  background-color: #a2423a;
+  height: 285px;
+  width: 6px;
+  border-radius: 10px;
+  transform: rotate(-45deg);
+}

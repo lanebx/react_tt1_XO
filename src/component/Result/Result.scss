@@ -1,1 +1,9 @@
 @import '../../variable';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.Result {
+  color: $text-color;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+}

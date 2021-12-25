@@ -9,8 +9,6 @@ interface State {
   firstPlayerName: string;
   secondPlayerName: string;
   loggedIn: boolean;
-  firstPlayerScore: number;
-  secondPlayerScore: number;
 }
 
 export class App extends React.Component {
@@ -18,8 +16,6 @@ export class App extends React.Component {
     firstPlayerName: '',
     secondPlayerName: '',
     loggedIn: false, // если логин совершен то показать поле, скрыть логин панель
-    firstPlayerScore: 0,
-    secondPlayerScore: 0,
   };
 
   login = (user1Name: string, user2Name: string) => {
@@ -30,8 +26,18 @@ export class App extends React.Component {
     });
   };
 
+  newGame = () => {
+    this.setState({
+      firstPlayerName: '',
+      secondPlayerName: '',
+      loggedIn: false,
+    });
+  };
+
   render(): React.ReactNode {
     const { loggedIn, firstPlayerName, secondPlayerName } = this.state;
+
+    // console.log(loggedIn, firstPlayerName, secondPlayerName);
 
     return (
       <div className="Aplication">
@@ -45,9 +51,9 @@ export class App extends React.Component {
             <Field
               firstPlayerName={firstPlayerName}
               secondPlayerName={secondPlayerName}
+              newGame={this.newGame}
             />
           )}
-
       </div>
     );
   }
